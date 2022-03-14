@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0
+}
+*{
+    box-sizing: border-box;
+}
+
+.app{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+.sidenav{
+    background-color: #fafafa;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    border-right: 2px solid rgb(209, 206, 206);
+    padding: 1rem;
+}
+
+.main{
+    margin-left: 260px;
+    width: 100%;
+}
+
+.p__16{
+    padding: 1rem;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+a:hover{
+    text-decoration: underline;
+}
+li{
+    margin-bottom: 0.5rem;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color:orange;
+    margin: 24px auto;
+}
