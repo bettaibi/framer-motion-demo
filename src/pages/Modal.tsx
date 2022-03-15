@@ -44,10 +44,13 @@ const Modal = () => {
             variants={overlayVariants}
             animate="visible"
             initial="hidden"
-            exit="hidden">
+            exit="hidden"
+            onClick={handletoggle}>
+
             <motion.div className="modal"
               key="modal"
               variants={ModalVariants}
+              onClick={(e)=> {e.stopPropagation()}}
              >
               <div className="modal-body p__16">
                 <p>
