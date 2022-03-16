@@ -4,18 +4,14 @@ import { images } from '../models/images.models';
 
 const slideShowVariants = {
   hidden: {
-    opacity: 0.3,
+    opacity: 0.4,
   },
   visible: {
-    x: 0,
     opacity: 1,
     transition: {
       duration: 0.5,
       ease: 'easeInOut'
     }
-  },
-  exit: {
-    x: 100,
   }
 };
 
@@ -43,16 +39,13 @@ const Slider = () => {
           images.map((item, index) => (
             <React.Fragment key={item.title} >
               {index == (activeSlide - 1) &&
-                <AnimatePresence exitBeforeEnter>
                   <motion.div className="slideshow"
                     variants={slideShowVariants}
                     initial="hidden"
                     animate="visible"
-                    exit="exit"
                   >
                     <img src={item.imageUrl} alt="slide" />
                   </motion.div>
-                </AnimatePresence>
               }
             </React.Fragment>
           ))
